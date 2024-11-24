@@ -8,8 +8,8 @@ file_path = r"C:\Users\ldias\Downloads\goa-full\combined.nc"
 data = xr.open_dataset(file_path)
 
 # Define Goa region bounding box
-goa_lat_min, goa_lat_max = 14.5, 15.5
-goa_lon_min, goa_lon_max = 73.5, 74.5
+goa_lat_min, goa_lat_max = 14.898333, 15.666667
+goa_lon_min, goa_lon_max = 73.675833, 74.336944
 
 # Subset the data for Goa region
 goa_data = data.sel(
