@@ -22,6 +22,8 @@ goa_data['time'] = pd.to_datetime(goa_data['time'].values, unit='s', origin='uni
 
 # Filter for months May (5) to November (11)
 goa_data = goa_data.where(goa_data['time.month'].isin(range(5, 11)), drop=True)
+# Or select only one month
+#goa_data = goa_data.where(goa_data['time.month'] == 10, drop=True)
 
 # Calculate total precipitation for the Goa region (spatially averaged)
 goa_precip = goa_data['APCP_sfc'].mean(dim=['latitude', 'longitude'])
